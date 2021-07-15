@@ -6,6 +6,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
 }
 
 nav {
@@ -148,10 +149,45 @@ body section {
           justify-content: center;
 }
 
-.portfolio .projects .card {
+.portfolio .projects .project {
   width: 100%;
-  height: 15rem;
-  border: 1px solid red;
+  height: 20rem;
+  border-radius: 0.75rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(60, 243, 152, 0.685) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(60, 243, 152, 0.685) 0px 6px 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.portfolio .projects .project .title {
+  color: black;
+}
+
+.portfolio .projects .project .description {
+  display: none;
+}
+
+.portfolio .projects .project:hover .title {
+  display: none;
+}
+
+.portfolio .projects .project:hover .description {
+  display: block;
+}
+
+.portfolio .projects .project:nth-child(2n) {
+  -webkit-box-shadow: rgba(12, 163, 118, 0.19) 0px 10px 20px, rgba(238, 95, 29, 0.788) 0px 6px 6px;
+          box-shadow: rgba(12, 163, 118, 0.19) 0px 10px 20px, rgba(238, 95, 29, 0.788) 0px 6px 6px;
 }
 
 .title {
