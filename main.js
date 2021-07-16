@@ -10,7 +10,9 @@ $(document).ready(
             $(".projects").append(
               `<div class='project'>
               <div class="title">${res.name}</div>
-              <div class="description">${res.description}</div>
+              <div class="description">${
+                res.description ? res.description : "No description available"
+              }</div>
               </div>`
             ) && console.log(res)
         );

@@ -5,8 +5,9 @@ $font_primary: "Pacifico", cursive;
 $font_nunito: "Nunito", sans-serif;
 $color_lilwhite: #efecec;
 $color_lilorange: orange;
-$color_lilblack: #393e46;
-$color_lilblue: #115870;
+$color_lilblack: #fed90f;
+$color_lilblue: #70d1fe;
+$clr_homerblack: #424f46;
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +22,7 @@ nav {
   font-family: $font_primary;
   background-color: $color_lilblack;
   border-bottom: 2px solid $color_lilorange;
-  color: $color_lilwhite;
+  color: $clr_homerblack;
 
   ul {
     display: flex;
@@ -31,7 +32,7 @@ nav {
       padding: 1rem;
       a {
         text-decoration: none;
-        color: inherit;
+        color: $clr_homerblack;
       }
     }
   }
@@ -48,6 +49,7 @@ body {
 .intro,
 .portfolio {
   position: relative;
+  width: 100vw;
 }
 .intro {
   display: flex;
@@ -56,28 +58,34 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   .image {
-    width: 13rem;
-    height: 13rem;
+    width: 15rem;
+    height: 15rem;
     margin-top: 2rem;
     position: relative;
     border: 5px solid $color_lilblue;
     border-radius: 50%;
-    animation: circle 5s linear infinite 0s;
+    // animation: circle 5s linear infinite 0s;
 
-    #ip {
-      position: absolute;
-      top: 0%;
-      left: 30%;
-      background-color: red;
-      z-index: 3;
-      width: 10px;
-      height: 10px;
+    // #ip {
+    //   position: absolute;
+    //   top: 0%;
+    //   left: 30%;
+    //   background-color: red;
+    //   z-index: 3;
+    //   width: 10px;
+    //   height: 10px;
+    //   border-radius: 50%;
+    // }
+    // @keyframes circle {
+    //   to {
+    //     transform: rotate(360deg);
+    //   }
+    // }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 50%;
-    }
-    @keyframes circle {
-      to {
-        transform: rotate(360deg);
-      }
     }
   }
 
@@ -90,11 +98,10 @@ body {
   #triangle {
     position: absolute;
     width: 50%;
-
     right: 0%;
     bottom: 0%;
     height: 20rem;
-    background: $color_lilblack;
+    background: $color_lilblue;
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
   }
 }
@@ -102,16 +109,28 @@ body {
 .portfolio {
   display: flex;
   flex-direction: column;
+  position: relative;
   display: flex;
+
+  .background-z {
+    position: absolute;
+    z-index: -3;
+    top: -10%;
+    opacity: 0.75;
+    width: 50%;
+    transform: rotate(30deg);
+  }
   .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
     grid-gap: 2rem;
     justify-content: center;
+
     .project {
       width: 100%;
       height: 20rem;
       border-radius: 0.75rem;
+      background-color: rgba(239, 236, 236, 0.692);
       box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
         rgba(60, 243, 152, 0.685) 0px 6px 6px;
       display: flex;
@@ -122,6 +141,7 @@ body {
         color: black;
       }
       .description {
+        padding: 2rem;
         display: none;
       }
       &:hover {
