@@ -173,3 +173,24 @@ body {
   fill: #393e46;
   fill-opacity: 1;
 }
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    color: #424f46;
+    font-size: larger;
+  }
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background-color: rgba(239, 236, 236, 0.692);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(24, 132, 204, 0.356) 0px 6px 6px;
+  width: 400px;
+  border-radius: 50px;
+  height: 400px;
+}
